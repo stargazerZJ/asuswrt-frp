@@ -1,0 +1,10 @@
+#! /bin/sh
+
+FRPC_PROCESS=`ps | grep frpc | grep -v grep`
+
+if [ -n "$FRPC_PROCESS" ]
+then
+  /opt/etc/init.d/S60frp restart
+fi
+
+exit 0

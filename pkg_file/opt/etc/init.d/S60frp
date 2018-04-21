@@ -1,0 +1,44 @@
+#! /bin/sh
+
+NAME=frpc
+DAEMON=/opt/bin/frpc
+DAEMON_OPTS="-c /opt/etc/frp/frpc.ini"
+DAEMON_RELOAD_OPTS="reload -c /opt/etc/frp/frpc.ini"
+
+# Exit if the package is not installed
+[ -x $DAEMON ] || exit 0
+
+case "$1" in
+  start)
+    nohup $DAEMON $DAEMON_OPTS >/dev/null 2>&1 &
+    ;;
+
+  reload)
+    $DAEMON $DAEMON_RELOAD_OPTS
+    ;;
+
+  restart)
+    killall $NAME
+    sleep 1
+    nohup $DAEMON $DAEMON_OPTS >/dev/null 2>&1 &
+    ;;
+
+  stop)
+    killall $NAME
+    ;;
+
+  firewall-start)
+    ;;
+
+  firewall-restart)
+    ;;
+
+  firewall-stop)
+    ;;
+
+  *)
+    echo "Usage: $0 {start|stop|restart|reload|firewall-start|firewall-stop|firewall-restart}"
+    exit 1
+    ;;
+esac
+exit 0
