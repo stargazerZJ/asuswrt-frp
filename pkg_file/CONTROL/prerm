@@ -1,4 +1,4 @@
 #! /bin/sh
 
-/opt/etc/init.d/S60frp stop
 /opt/etc/init.d/S60frp firewall-stop
+/opt/etc/init.d/S60frp stop

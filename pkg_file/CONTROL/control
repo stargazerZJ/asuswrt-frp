@@ -8,7 +8,7 @@ Maintainer: fatedier
 Source: https://github.com/fatedier/frp
 URL:
 Description: A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.
-Depends:
+Depends: start-stop-daemon
 Suggests:
 Conflicts:
 Enabled: yes
