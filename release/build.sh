@@ -18,7 +18,9 @@ echo "Building $PKG_VER for ${FRP_ARCH}..."
 
 cd $TEMP_PATH
 wget https://github.com/fatedier/frp/releases/download/${FRP_VER}/frp_${FRP_VER:1}_linux_${FRP_ARCH}.tar.gz
+mkdir -p ../../pkg_file/opt/bin
 tar -zxvf frp_${FRP_VER:1}_linux_${FRP_ARCH}.tar.gz -C ../../pkg_file/opt/bin/ frp_${FRP_VER:1}_linux_${FRP_ARCH}/frpc --strip-components 1
+mkdir -p ../../pkg_file/opt/etc/frp
 tar -zxvf frp_${FRP_VER:1}_linux_${FRP_ARCH}.tar.gz -C ../../pkg_file/opt/etc/frp/ frp_${FRP_VER:1}_linux_${FRP_ARCH}/frpc.ini --strip-components 1
 rm frp_${FRP_VER:1}_linux_${FRP_ARCH}.tar.gz
 sed -i "/Architecture/c\Architecture: $PKG_ARCH" ../../pkg_file/CONTROL/control
