@@ -1,4 +1,5 @@
 /pkg_file/opt/bin/frpc
 /pkg_file/opt/etc/frp/frpc.ini
+/pkg_file/opt/etc/frp/frpc.toml
 /release/tmp
 /release/packages

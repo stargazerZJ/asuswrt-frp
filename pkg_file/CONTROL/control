@@ -2,7 +2,7 @@ Package: frp
 Architecture: arm
 Priority: optional
 Section: net
-Version: 0.16.1-1
+Version: 0.61.0
 OptionalUtility:
 Maintainer: fatedier
 Source: https://github.com/fatedier/frp

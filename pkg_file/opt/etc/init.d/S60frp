@@ -2,8 +2,8 @@
 
 NAME=frpc
 DAEMON=/opt/bin/frpc
-DAEMON_OPTS="-c /opt/etc/frp/frpc.ini"
-DAEMON_RELOAD_OPTS="reload -c /opt/etc/frp/frpc.ini"
+DAEMON_OPTS="-c /opt/etc/frp/frpc.toml"
+DAEMON_RELOAD_OPTS="reload -c /opt/etc/frp/frpc.toml"
 PIDFILE=/var/run/$NAME.pid
 
 # Exit if the package is not installed
